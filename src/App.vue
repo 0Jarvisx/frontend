@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <upload-form></upload-form>
+    <file-list category="investigaciones"></file-list>
+    <file-list category="entrevistas"></file-list>
+    <file-list category="curriculums"></file-list>
+    <file-list category="otros"></file-list>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UploadForm from './components/UploadForm.vue';
+import FileList from './components/FileList.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    UploadForm,
+    FileList,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
