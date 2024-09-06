@@ -66,7 +66,7 @@ export default {
   methods: {
     async refreshFiles() {
       try {
-        const response = await axios.get(`http://3.86.187.164:3000/files/${this.category}`, {withCredentials: false});
+        const response = await axios.get(`http://54.166.150.41:3000/files/${this.category}`, {withCredentials: false});
         this.files = response.data;
         console.log('----------this.files', this.files);
       } catch (error) {
