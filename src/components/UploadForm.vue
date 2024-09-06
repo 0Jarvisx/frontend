@@ -1,6 +1,6 @@
 <template>
   <div class="relative p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4">
-    <h2 class="text-xl font-bold text-gray-900">Upload File</h2>
+    <h2 class="text-xl font-bold text-gray-900">Subir archivo</h2>
     <form @submit.prevent="uploadFile">
       <div class="mb-4">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="category">Category</label>
@@ -49,7 +49,7 @@ export default {
       this.isUploading = true; 
 
       try {
-        const response = await axios.post('http://localhost:3000/upload?category=' + this.category, formData, {withCredentials: false});
+        const response = await axios.post('http://3.83.24.121:3000/upload?category=' + this.category, formData, {withCredentials: false});
         console.log('File uploaded:', response.data);
         if (response.data.message) this.$emit('file-uploaded', this.category);
         
