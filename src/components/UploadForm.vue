@@ -49,7 +49,7 @@ export default {
       this.isUploading = true; 
 
       try {
-        const response = await axios.post('http://54.166.150.41:3000/upload?category=' + this.category, formData, {withCredentials: false});
+        const response = await axios.post('http://54.89.158.166:3000/upload?category=' + this.category, formData, {withCredentials: false});
         console.log('File uploaded:', response.data);
         if (response.data.message) this.$emit('file-uploaded', this.category);
         
